@@ -1,0 +1,38 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class AfterLoginPage {
+	
+	WebDriver driver;
+	@FindBy(xpath="(//ul[@class='_114Zhd']/li)[6]") WebElement HomeAndFurnitureTab ;
+	@FindBy(xpath="//span[text()='Curtains']") WebElement CurtainsTab;
+	/*By FurnitureTab = By.xpath("(//ul[@class='_114Zhd']/li)[6]");
+	By CurtainsOption = By.xpath("//span[text()='Curtains']");*/
+	
+	public AfterLoginPage(WebDriver driver) {
+		this.driver= driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+public void TabClick() throws Exception
+{
+	 /*WebElement Ft = driver.findElement(FurnitureTab);
+     WebElement co = driver.findElement(CurtainsOption);*/
+     Actions ac = new Actions(driver);
+     System.out.println("on homepage");
+     Thread.sleep(10000);
+     ac.moveToElement(HomeAndFurnitureTab).click().perform();
+     ac.moveToElement(CurtainsTab).click().perform();
+ 	/*ac.moveToElement(Ft).click().perform();
+ 	Thread.sleep(10000);
+ 	ac.moveToElement(co).click().perform();
+ 	Thread.sleep(10000);
+*/
+}
+}

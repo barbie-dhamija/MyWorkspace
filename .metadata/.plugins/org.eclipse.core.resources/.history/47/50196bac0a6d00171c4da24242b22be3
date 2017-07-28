@@ -1,0 +1,24 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import Test.MyTest;
+
+public class BeforeLoginPage extends MyTest{
+WebDriver driver;
+
+By LoginButton = By.xpath("(//ul[@class='_3Ji-EC']/li)[9]");
+
+
+public BeforeLoginPage(WebDriver driver)
+{
+	this.driver = driver;
+}
+
+public void forLoginClick()
+{
+	System.out.println("login click");
+	driver.findElement(LoginButton).click();
+}
+}

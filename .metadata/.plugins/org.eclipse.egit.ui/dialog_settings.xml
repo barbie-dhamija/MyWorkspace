@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="0" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/barbie-dhamija/MyRepo"/>
+		<item value="https://github.com/Rahul-Choudhary/PriyakshiProj.git"/>
+		<item value="https://github.com/https://www.github.com/Rahul-Choudhary/PriyakshiProj.git"/>
+		<item value="https://github.com/https://www.github.com/Rahul-Choudhary/PriyakshiProj"/>
+		<item value="github.com:https//www.github.com/Rahul-Choudhary/PriyakshiProj"/>
+		<item value="localhost:https://www.github.com/Rahul-Choudhary/PriyakshiProj"/>
+		<item value="it.choudhary.rahul%40gmail.com@1:https://github.com/Rahul-Choudhary/PriyakshiProj"/>
+	</list>
+	<section name="GitImportWizard">
+		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
+	</section>
+</section>

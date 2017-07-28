@@ -1,0 +1,48 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class LoginWindow {
+	
+	public LoginWindow(WebDriver driver) {
+		this.driver=driver;
+		
+	}
+
+	WebDriver driver;
+	By username = By.xpath("(//div[@class='_39M2dM'])[1]/input");
+	By password = By.xpath("(//div[@class='_39M2dM'])[2]/input");
+	By loginSubmit = By.xpath("//button[@class='_2AkmmA _1LctnI _7UHT_c']");
+	By FurnitureTab = By.xpath("(//ul[@class='_114Zhd']/li)[6]");
+	By CurtainsOption = By.xpath("//span[text()='Curtains']");
+	WebElement Ft = driver.findElement(FurnitureTab);
+	WebElement co = driver.findElement(CurtainsOption);
+	
+	public void SearchTextWrite(String uname, String Pwd) throws InterruptedException
+	{
+		Thread.sleep(10000);
+	driver.findElement(username).sendKeys(uname);
+	Thread.sleep(10000);
+	driver.findElement(password).sendKeys(Pwd);
+	Thread.sleep(10000);
+	driver.findElement(loginSubmit).click();
+	System.out.println("hello welcome");
+	Thread.sleep(10000);
+	Actions ac = new Actions(driver);
+	Thread.sleep(10000);
+	ac.moveToElement(Ft).perform();
+	Thread.sleep(10000);
+	ac.moveToElement(co).click().perform();
+
+}
+	}
+	//public void TabClick()
+	/*{
+		Actions ac = new Actions(driver);
+		ac.moveToElement(Ft).perform();
+		ac.moveToElement(co).click().perform();
+	}*/
+	

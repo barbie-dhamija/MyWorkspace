@@ -1,0 +1,12 @@
+
+public class TargetProgram extends GenericProgram {
+
+	public static void main(String[] args) {
+		
+		int array[]={1,7,3,9,3,2,7,1,0,1,4};
+		
+		
+
+	}
+
+}

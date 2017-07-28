@@ -1,0 +1,20 @@
+package Test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import Pages.BeforeLoginPage;
+
+public class MyPOMTest {
+
+	public static void main(String[] args) throws Exception {
+		  System.setProperty("webdriver.gecko.driver", "C:\\Users\\rahul.choudhary\\Downloads\\geckodriver.exe");
+		     WebDriver dr = new FirefoxDriver();
+		     dr.get("https://www.flipkart.com");
+		     Thread.sleep(10000);
+		     BeforeLoginPage bf = new BeforeLoginPage(dr);
+		     bf.forLoginClick();
+
+	}
+
+}

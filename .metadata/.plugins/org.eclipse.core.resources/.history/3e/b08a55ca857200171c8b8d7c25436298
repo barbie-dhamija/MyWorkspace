@@ -1,0 +1,93 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+
+public class CollectionsClass1 {
+private int rollno;
+private String name;
+	
+	public static void main(String[] args) {
+	//normal way of initializing ArrayList
+		/*ArrayList<String> list1 = new ArrayList<String>();
+		list1.add("Rahul");
+		list1.add(null);
+	list1.add("dhamija");
+	list1.add("barbie");
+	list1.add("babu");
+	System.out.println(list1);
+	
+	//Using Inner Class Method to initialize ArrayList
+	ArrayList<String> ast = new ArrayList<String>(){{add("helloo");add("barbie");add("dhamija");}};
+	 ArrayList<Boolean> lb = new ArrayList<Boolean>(){{add(true);add(true);add(true);}};
+	
+	 //Using Arrays.asList
+    ArrayList<Integer> al = new ArrayList<Integer>(Arrays.asList(17,12,1994,354));
+    ArrayList<Character> cl = new ArrayList<Character>(Arrays.asList('b','a','r','b','i','e'));
+    
+    System.out.println(ast);
+    System.out.println(al);
+    System.out.println(lb);
+    System.out.println(cl);
+    LinkedList<Integer> li = new LinkedList<Integer>(){{add(3);add(4);}};
+    LinkedList<String> li2 = new LinkedList<String>(Arrays.asList("hii","how","are","you"));
+    System.out.println(li);
+    System.out.println(li2);
+    System.out.println( li2.peek());
+    //Collections.sort(list1, Collections.reverseOrder());
+		
+		LinkedList<Integer> mt = new LinkedList<Integer>(){{add(565);add(2);add(3);add(9);}};
+		Collections.sort(cl);
+		System.out.println(cl);
+		//Collections.sort(list1);
+		System.out.println("our reversed list is: " +cl);
+		System.out.println(cl.get(2));
+		System.out.println(cl.indexOf(11));*/
+		ArrayList a1 = new ArrayList();
+		ArrayList a2 = new ArrayList();
+		 
+		a1.add("a");
+		a1.add("b");
+		a1.add("c");
+		a1.add("d");
+		a1.add("e");
+		 
+		a2.add("a");
+		a2.add("b");
+		a2.add("c");
+		a2.add("d");
+		a2.add("f");
+		
+	int l1=a1.size();
+	int l2=a2.size();
+	if(l1==l2)
+	{
+		
+		for(int i=1;i<l1;i++)
+		{
+			for(int k=i;k<=i;k++)
+			{
+				if(a1.get(i)!=a2.get(k))
+				{
+					System.out.println(a1.get(i)+ " other is " +a2.get(k));
+				}
+				
+			}
+			
+		}
+			
+			
+	}
+	else
+		System.out.println("length not equal");
+	}
+	//usage of toString method: converts object to string
+	ArrayList<Integer> alt = new ArrayList<Integer>();
+	
+	
+	
+}

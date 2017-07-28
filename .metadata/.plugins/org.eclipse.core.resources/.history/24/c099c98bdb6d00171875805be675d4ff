@@ -1,0 +1,47 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import Test.MyTest;
+
+public class LoginWindow{
+	
+	WebDriver driver;
+	@FindBy(xpath="(//div[@class='_39M2dM'])[1]/input") WebElement username;
+	@FindBy(xpath="(//div[@class='_39M2dM'])[2]/input") WebElement password;
+    @FindBy(xpath="//button[@class='_2AkmmA _1LctnI _7UHT_c']") WebElement LoginSubmit;
+	
+    //By username = By.xpath("(//div[@class='_39M2dM'])[1]/input");
+	//By password = By.xpath("(//div[@class='_39M2dM'])[2]/input");
+	//By loginSubmit = By.xpath("//button[@class='_2AkmmA _1LctnI _7UHT_c']");
+	
+	
+	public LoginWindow(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+		
+	}
+
+	public void SearchTextWrite(String uname, String Pwd) throws Exception
+	{
+		Thread.sleep(10000);
+		username.sendKeys(uname);
+		Thread.sleep(10000);
+		password.sendKeys(Pwd);
+		Thread.sleep(10000);
+		LoginSubmit.click();
+	/*driver.findElement(username).sendKeys(uname);
+	Thread.sleep(10000);
+	driver.findElement(password).sendKeys(Pwd);
+	Thread.sleep(10000);
+	driver.findElement(loginSubmit).click();*/
+	
+
+}
+	}
+	

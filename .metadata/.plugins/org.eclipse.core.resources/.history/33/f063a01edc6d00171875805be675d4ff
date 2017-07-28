@@ -1,0 +1,31 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class AfterLoginPage {
+	
+	WebDriver driver;
+	By FurnitureTab = By.xpath("(//ul[@class='_114Zhd']/li)[6]");
+	By CurtainsOption = By.xpath("//span[text()='Curtains']");
+	
+	public AfterLoginPage(WebDriver driver) {
+		this.driver= driver;
+	}
+	
+public void TabClick() throws InterruptedException
+{
+	 WebElement Ft = driver.findElement(FurnitureTab);
+     WebElement co = driver.findElement(CurtainsOption);
+     Actions ac = new Actions(driver);
+     System.out.println("on homepage");
+     Thread.sleep(10000);
+ 	ac.moveToElement(Ft).click().perform();
+ 	Thread.sleep(10000);
+ 	ac.moveToElement(co).click().perform();
+ 	Thread.sleep(10000);
+
+}
+}
